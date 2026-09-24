@@ -1,0 +1,82 @@
+/* ==========================================================
+   Samdo FC — Our Story (home.html)
+   Uses the shared minimal theme in index.css.
+   ========================================================== */
+.story-hero .hero-img{object-position:60% 40%;}
+.story-hero .lede{max-width:52ch;}
+
+/* village */
+.village{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem;align-items:center;}
+.village h2{color:var(--navy);margin-bottom:1.4rem;}
+.village-text p:not(.kicker){max-width:52ch;margin:0 0 1rem;font-size:1.05rem;line-height:1.8;color:var(--muted);}
+.village-photo{margin:0;}
+.village-photo img{width:100%;height:auto;display:block;border-radius:var(--radius);}
+.village-photo figcaption{margin-top:.7rem;font-size:.85rem;color:var(--muted);}
+
+/* facts */
+.facts dl{display:grid;grid-template-columns:repeat(4,1fr);margin:0;border-block:1px solid var(--line);}
+.facts dl>div{padding:1.8rem 1.4rem;}
+.facts dl>div+div{border-left:1px solid var(--line);}
+.facts dt{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);}
+.facts dd{margin:.5rem 0 0;font-family:'Anton',sans-serif;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1;color:var(--navy);}
+
+/* quote */
+.quote blockquote{margin:0 auto;max-width:900px;padding-left:1.8rem;border-left:3px solid var(--gold);}
+.quote p{margin:0;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,3rem);line-height:1.1;color:var(--navy);}
+
+/* origins */
+.origins{background:var(--white);border-block:1px solid var(--line);}
+.origins h2{color:var(--navy);}
+.origins-lede{max-width:60ch;margin:1.2rem 0 0;font-size:1.05rem;line-height:1.8;}
+.steps{list-style:none;padding:0;margin:3rem 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;}
+.steps li{padding-top:1.2rem;border-top:2px solid var(--navy);}
+.steps li:last-child{border-top-color:var(--gold);}
+.steps span{font-size:.8rem;font-weight:600;letter-spacing:.14em;color:var(--gold-text);}
+.steps h3{margin-top:.6rem;color:var(--navy);font-size:1.3rem;line-height:1.1;}
+
+/* altitude */
+.altitude{background:var(--navy);color:#fff;padding-block:6rem;}
+.altitude-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.altitude .kicker{color:var(--gold);}
+.altitude p{max-width:46ch;margin:1.2rem 0 0;color:rgba(255,255,255,.8);line-height:1.8;}
+.bar-row{display:grid;grid-template-columns:96px 1fr auto;align-items:center;gap:1rem;margin-bottom:1.2rem;}
+.bar-row span{font-size:.85rem;color:rgba(255,255,255,.75);}
+.bar{height:8px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden;}
+.bar i{display:block;height:100%;width:var(--w);background:var(--gold);transform-origin:left;transition:transform 1.2s ease .2s;}
+.bar-row:nth-child(2) .bar i{background:rgba(255,255,255,.5);}
+.js .bars .bar i{transform:scaleX(0);}
+.js .bars.in .bar i{transform:scaleX(1);}
+.bar-row b{font-family:'Anton',sans-serif;font-weight:400;font-size:1.3rem;min-width:5.4rem;text-align:right;}
+.bar-note{margin-top:1.6rem!important;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.15);font-size:.95rem;}
+.bar-note b{color:var(--gold);font-weight:600;}
+
+/* next chapter */
+.next{display:flex;flex-direction:column;align-items:flex-start;gap:2rem;}
+.next-link{display:block;width:100%;padding:2.4rem 0;border-block:1px solid var(--line);text-decoration:none;color:var(--navy);}
+.next-link .kicker{display:block;}
+.next-title{display:block;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1;transition:color .2s;}
+.next-link:hover .next-title{color:var(--gold-text);}
+.next-link .muted{display:block;margin-top:.6rem;}
+
+/* responsive */
+@media(max-width:1100px){
+  .village,.altitude-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .facts dl{grid-template-columns:repeat(2,1fr);}
+  .facts dl>div:nth-child(3){border-left:0;}
+  .facts dl>div:nth-child(n+3){border-top:1px solid var(--line);}
+  .steps{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:700px){
+  .altitude{padding-block:4rem;}
+  .facts dl>div{padding:1.3rem 1rem;}
+  .steps{grid-template-columns:1fr;gap:1.2rem;}
+  .quote blockquote{padding-left:1.2rem;}
+  .bar-row{grid-template-columns:80px 1fr auto;gap:.6rem;}
+}
+@media(prefers-reduced-motion:reduce){.js .bars .bar i{transform:none;transition:none;}}
+
+/* footer: same look as the Club / Legacy / People / Future pages */
+.story-page footer{line-height:normal;}
+.story-page footer .logo-badge{width:52px;height:52px;border:1px solid var(--saffron);background:rgba(224,164,44,.08);border-radius:50%;}
+.story-page footer h3{font-size:1.8rem;line-height:.95;margin:1em 0;}
+.story-page footer p{margin:1em 0;line-height:1.5;}

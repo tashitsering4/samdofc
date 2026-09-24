@@ -1,0 +1,51 @@
+.future-page{background:#142238;color:#ffffff;--ivory:#ffffff;--saffron:#f4b942;--pine:#243e60;--terracotta:#f4b942;background-image:radial-gradient(ellipse at 85% 8%,#34557c66,transparent 44%);}
+.future-hero{max-width:1360px;margin:auto;padding:8.5rem 5vw 3.5rem;}
+.future-hero .eyebrow,.giving-story .eyebrow,.future-thanks .eyebrow{color:var(--saffron);}
+.future-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:5rem;align-items:end;}
+.future-intro h1{font-size:clamp(3rem,5.9vw,6rem);margin:1rem 0 0;line-height:1.05;}
+.future-intro em{font-style:normal;color:#f4b942;}
+.future-lede p{font-size:1.125rem;line-height:1.8;max-width:38ch;color:#cbd6e5;}
+.future-anchor{display:flex;justify-content:space-between;max-width:20rem;padding:1rem 1.25rem;color:#142238;background:#f4b942;text-decoration:none;border-radius:999px;font-weight:600;}
+.future-anchor span{color:#243e60;font-size:1.5rem;}
+.giving-layout{max-width:1360px;margin:auto;padding:0 5vw 5rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;scroll-margin-top:6rem;}
+.giving-story{display:grid;gap:2rem;}
+.community-photo{position:relative;border-radius:100px 16px 16px 16px;overflow:hidden;background:#233850;border:1px solid #4a607d;box-shadow:0 20px 60px #08111f40;}
+.community-photo img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;}
+.community-photo figcaption{position:absolute;bottom:0;left:0;right:0;padding:4rem 1.5rem 1.5rem;background:linear-gradient(transparent,rgba(0,0,0,.8));font-family:'Oswald',sans-serif;font-size:1.5rem;}
+.contact-panel{padding:2.4rem;background:#203550;border:1px solid #465f7c;border-radius:20px;}
+.contact-panel h2,.donation-panel h2{font-size:clamp(1.9rem,3vw,2.8rem);margin:1rem 0;line-height:1.1;}
+.contact-panel p,.donation-panel>p{line-height:1.7;}
+.contact-panel p{color:#d4dfed;}
+.contact-number{display:block;font-family:'Oswald',sans-serif;font-size:clamp(1.6rem,3vw,2.3rem);color:var(--ivory);text-decoration:none;margin:1.5rem 0;}
+.giving-button{display:flex;align-items:center;justify-content:space-between;gap:1rem;background:#243e60;color:#fff;text-decoration:none;padding:1rem 1.2rem;min-height:50px;border-radius:12px;font-size:1rem;font-weight:600;transition:background .2s,transform .2s;}
+.giving-button:hover{background:#142238;transform:translateY(-2px);}
+.whatsapp-button{background:#f4b942;color:#142238;}
+.whatsapp-button:hover{background:#ffd16e;}
+.contact-panel .contact-small{font-size:.875rem;margin-bottom:0;}
+.donation-panel{background:#fff8ee;color:#142238;padding:2.4rem;border-radius:24px;border:1px solid #f1dfbd;box-shadow:0 24px 70px #08111f55;}
+.donation-heading{display:flex;justify-content:space-between;align-items:center;}
+.donation-heading .eyebrow{color:#6c5223;}
+.donation-symbol{font-size:1.7rem;color:#243e60;background:#f9e7bd;border-radius:50%;width:44px;height:44px;display:grid;place-items:center;}
+.donation-panel>p{color:#536075;}
+.qr-image-link{display:block;max-width:370px;margin:1.5rem auto;background:#fff;padding:8px;border:1px solid #e5dccb;border-radius:12px;box-shadow:0 8px 24px #14223812;}
+.donation-qr{display:block;width:100%;height:auto;}
+.recipient-details{border-top:1px solid #ddd8ce;padding-top:1rem;}
+.recipient-details>div{display:flex;justify-content:space-between;gap:1rem;padding:.45rem 0;font-size:.875rem;}
+.recipient-details span{color:#596477;}
+.recipient-details strong{text-align:right;font-weight:600;}
+.donation-panel .recipient-note,.donation-panel .same-phone{font-size:.875rem;line-height:1.6;}
+.donation-actions{display:grid;gap:.75rem;margin-top:1.5rem;}
+.donation-actions button{border:1px solid #99a5b5;background:transparent;color:#243e60;min-height:48px;border-radius:12px;font:inherit;cursor:pointer;}
+.donation-actions button:hover{background:#eeeae1;}
+.future-thanks{text-align:center;padding:4rem 5vw 5rem;background:#f4b942;color:#142238;border-top:1px solid #ffd576;}
+.future-thanks h2{font-size:clamp(2rem,4vw,4rem);margin:1.5rem 0;}
+.future-thanks p{color:#38475a;}
+.future-thanks a{display:inline-block;color:#142238;padding:1rem;border-bottom:1px solid #8c712d;}
+.future-thanks .eyebrow{color:#4c412b;}
+.future-page #chapterNav{background:#142238ed;}
+.future-page footer,.future-page .page-foot-nav{background:#0d1829!important;border-color:#354860!important;}
+.future-page :focus-visible{outline:3px solid #b67610;outline-offset:4px;}
+.future-page .page-foot-nav{max-width:none;padding:2rem 5vw;}
+.future-page .page-foot-nav a{color:var(--saffron);}
+@media(max-width:800px){.future-intro{grid-template-columns:1fr;gap:1rem;}.future-lede p{max-width:55ch;}.giving-layout{grid-template-columns:1fr;}.donation-panel{grid-row:1;}.future-hero{padding-top:7rem;}.future-intro h1{font-size:clamp(3rem,10vw,5rem);}.giving-story{gap:1.5rem;}.community-photo img{aspect-ratio:16/9;}}
+@media(max-width:440px){.donation-panel,.contact-panel{padding:1.4rem;}.recipient-details>div{flex-wrap:wrap;gap:.25rem .75rem;}.future-hero{padding-bottom:2rem;}.giving-layout{padding-bottom:3rem;}}

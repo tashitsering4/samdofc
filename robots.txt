@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tashitsering4.github.io/samdofc/sitemap.xml

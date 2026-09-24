@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Supporters | Samdo FC Donors 2025–2026</title>
+<meta name="description" content="A thank-you wall for everyone who has supported Samdo FC. See the 2025 and 2026 contributions that help the team travel, train and play.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0b1736">
+<link rel="canonical" href="https://tashitsering4.github.io/samdofc/supporters.html">
+<link rel="icon" type="image/png" href="images/web/crest.png">
+<link rel="apple-touch-icon" href="images/web/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Samdo FC">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Our Supporters | Samdo FC Donors 2025–2026">
+<meta property="og:description" content="A thank-you wall for everyone who has supported Samdo FC. See the 2025 and 2026 contributions that help the team travel, train and play.">
+<meta property="og:url" content="https://tashitsering4.github.io/samdofc/supporters.html">
+<meta property="og:image" content="https://tashitsering4.github.io/samdofc/images/web/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Samdo FC squad lined up in front of the mountains, 2026">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Supporters | Samdo FC Donors 2025–2026">
+<meta name="twitter:description" content="A thank-you wall for everyone who has supported Samdo FC. See the 2025 and 2026 contributions that help the team travel, train and play.">
+<meta name="twitter:image" content="https://tashitsering4.github.io/samdofc/images/web/og-image.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://tashitsering4.github.io/samdofc/"}, {"@type": "ListItem", "position": 2, "name": "Our Supporters", "item": "https://tashitsering4.github.io/samdofc/supporters.html"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="supporters.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="landing-page supporters-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav id="chapterNav" aria-label="Main navigation">
+  <a href="index.html" class="site-logo"><span class="logo-badge"><img src="images/web/crest.png" alt="Samdo FC crest" width="36" height="36"></span><span class="lname">Samdo FC</span></a>
+  <div class="nav-links"><a href="index.html">Home</a><a href="home.html">Our Story</a><a href="club.html">The Club</a><a href="legacy.html">The Legacy</a><a href="people.html">The People</a><a href="supporters.html" class="active">Our Supporters</a><a href="future.html">The Future</a></div>
+  <a href="gallery.html" class="nav-gallery">Gallery</a>
+</nav>
+
+<main id="main">
+<header class="s-hero">
+  <div class="wrap s-hero-grid">
+    <div>
+      <p class="kicker">Our supporters · Our strength</p>
+      <h1>Every name.<br><span>Part of our story.</span></h1>
+      <p class="lede">From Samdo to France, the USA and India, your generosity keeps us moving. This page is our thank-you to everyone who helps the team travel, train and play.</p>
+      <div class="actions"><a class="btn gold" href="future.html">Support the next season</a><a class="link light" href="#wall">See the thank-you wall ↓</a></div>
+    </div>
+    <aside class="s-total" aria-label="Donation summary">
+      <span class="s-total-label">Raised together</span>
+      <strong class="s-total-amt" id="grandTotal">—</strong>
+      <dl class="s-total-facts" id="totalFacts"></dl>
+    </aside>
+  </div>
+</header>
+
+<section class="section wrap s-overview" aria-labelledby="ovTitle">
+  <div class="s-overview-grid">
+    <div>
+      <p class="kicker">Season by season</p>
+      <h2 id="ovTitle">Every season, a village behind us.</h2>
+      <div class="s-seasons" id="seasonCards"></div>
+    </div>
+    <figure class="s-where" aria-labelledby="whereTitle">
+      <figcaption id="whereTitle"><strong>Where support comes from</strong><span>Total NPR by place, all seasons</span></figcaption>
+      <ol class="s-bars" id="whereBars"></ol>
+    </figure>
+  </div>
+</section>
+
+<section class="s-wall-section" id="wall" aria-labelledby="wallTitle">
+  <div class="wrap">
+    <div class="s-wall-head">
+      <div><p class="kicker">The thank-you wall</p><h2 id="wallTitle">Thank you, every one of you.</h2></div>
+      <p class="muted s-note">All amounts are in Nepalese rupees (NPR).</p>
+    </div>
+    <div class="s-controls">
+      <div class="s-tabs" role="tablist" aria-label="Choose a season" id="seasonTabs"></div>
+      <label class="s-search"><span class="sr-only">Search supporters</span><input type="search" id="wallSearch" placeholder="Search a name or place" autocomplete="off"></label>
+      <label class="s-sort"><span class="sr-only">Sort</span><select id="wallSort"><option value="list">As listed</option><option value="amount">Largest first</option><option value="name">A to Z</option></select></label>
+    </div>
+    <p class="s-result" id="wallResult" aria-live="polite"></p>
+    <ul class="s-wall" id="wallList"></ul>
+  </div>
+</section>
+
+<section class="support s-thanks">
+  <div class="wrap support-inner reveal">
+    <img src="images/web/crest.png" alt="" width="72" height="76" loading="lazy">
+    <h2>You're part of this team.</h2>
+    <p>Every contribution matters, big or small. Thank you for standing with Samdo FC.</p>
+    <div class="actions center">
+      <a class="btn gold" href="future.html">Support Samdo FC</a>
+      <a class="link light" href="https://wa.me/9779843738367" target="_blank" rel="noopener">Message us on WhatsApp →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="page-foot-nav light" style="background:var(--ivory);">
+  <a href="people.html">← Previous: The People</a>
+  <a href="future.html">Next: The Future →</a>
+</div>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+       <span class="logo-badge" style="width:52px;height:52px;margin-bottom:1rem;">
+        <img src="images/logo.png" alt="Samdo FC crest" style="width:100%;height:100%;object-fit:contain;border-radius:50%;">
+      </span>
+      <h3>SAMDO FC</h3>
+      <p style="font-family:'Oswald',sans-serif;font-weight:300;color:var(--ivory-dim);max-width:38ch;">More than football. We represent home. Samdo Village, Nubri Region, Gorkha, Nepal.</p>
+    </div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:.8rem;">Club</span>
+      <a href="home.html">Our Story</a>
+      <a href="club.html">Trophy Room</a>
+      <a href="legacy.html">Nubri Manaslu Cup</a>
+      <a href="future.html">Support Us</a>
+    </div>
+    <div>
+      <span class="eyebrow" style="display:block;margin-bottom:.8rem;">Connect</span>
+      <a href="https://www.facebook.com/people/SAMDO-FC/61561071696859/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://wa.me/9779843738367" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>Samdo Village · Nubri · Gorkha · Nepal</span>
+    <span>More Than Football. We Represent Home.</span>
+  </div>
+</footer>
+
+<script src="common.js"></script>
+<script src="index.js"></script>
+<script src="supporters-data.js"></script>
+<script src="supporters.js"></script>
+</body>
+</html>

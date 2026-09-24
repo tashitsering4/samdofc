@@ -1,0 +1,118 @@
+/* ==========================================================
+   Samdo FC — Our Supporters (supporters.html). Uses the shared theme in index.css.
+   ========================================================== */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
+/* hero */
+.s-hero{background:var(--navy);color:#fff;padding:9rem 0 5rem;position:relative;overflow:hidden;}
+.s-hero::before{content:'';position:absolute;right:-120px;top:-60px;width:520px;height:520px;background:url(images/web/crest.png) center/contain no-repeat;opacity:.05;pointer-events:none;}
+.s-hero-grid{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:4rem;align-items:center;}
+.s-hero .kicker{color:var(--gold);}
+.s-hero h1{font-size:clamp(3rem,7vw,6rem);line-height:.95;}
+.s-hero h1 span{color:var(--gold);}
+.s-hero .lede{max-width:48ch;margin:1.4rem 0 0;font-size:1.1rem;color:rgba(255,255,255,.82);}
+.s-total{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-top:3px solid var(--gold);border-radius:var(--radius);padding:2rem;}
+.s-total-label{font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);}
+.s-total-amt{display:block;margin-top:.6rem;font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2.6rem,5vw,4rem);line-height:1;font-variant-numeric:tabular-nums;}
+.s-total-amt small{font-size:.45em;color:rgba(255,255,255,.6);margin-right:.35rem;vertical-align:.35em;}
+.s-total-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem;margin:1.6rem 0 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.14);}
+.s-total-facts div{min-width:0;}
+.s-total-facts dt{font-size:.78rem;color:rgba(255,255,255,.6);}
+.s-total-facts dd{margin:.2rem 0 0;font-family:'Anton',sans-serif;font-size:1.8rem;line-height:1;}
+
+/* overview: season cards + where-from bars */
+.s-overview h2{color:var(--navy);margin-bottom:1.8rem;}
+.s-overview-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.s-seasons{display:grid;gap:1rem;}
+.s-season{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.2rem;padding:1.3rem 1.4rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius);color:var(--text);text-decoration:none;transition:border-color .2s,transform .2s;}
+.s-season:hover{border-color:var(--navy);transform:translateY(-2px);}
+.s-season-year{font-family:'Anton',sans-serif;font-size:2.4rem;line-height:1;color:var(--navy);}
+.s-season-meta strong{display:block;font-family:'Anton',sans-serif;font-weight:400;font-size:1.5rem;color:var(--navy);font-variant-numeric:tabular-nums;}
+.s-season-meta span{font-size:.88rem;color:var(--muted);}
+.s-season-go{color:var(--gold-text);font-weight:600;font-size:.9rem;white-space:nowrap;}
+.s-where{margin:0;padding:1.6rem 1.6rem 1.2rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius);}
+.s-where figcaption{display:flex;flex-direction:column;gap:.2rem;margin-bottom:1.3rem;}
+.s-where figcaption strong{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:1.4rem;color:var(--navy);}
+.s-where figcaption span{font-size:.85rem;color:var(--muted);}
+.s-bars{list-style:none;margin:0;padding:0;display:grid;gap:.85rem;}
+.s-bar{display:grid;grid-template-columns:7.5rem 1fr;align-items:center;gap:.9rem;cursor:default;}
+.s-bar-name{font-size:.9rem;font-weight:500;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.s-bar-name small{display:block;font-size:.75rem;font-weight:400;color:var(--muted);}
+.s-bar-track{position:relative;display:flex;align-items:center;gap:.6rem;min-width:0;}
+.s-bar-fill{height:14px;border-radius:0 4px 4px 0;background:var(--navy);width:calc(var(--w) * .78);min-width:4px;transform-origin:left;transition:transform 1s ease,background .2s;}
+.js .s-where:not(.in) .s-bar-fill{transform:scaleX(0);}
+.s-bar:hover .s-bar-fill{background:var(--gold-text);}
+.s-bar-val{font-size:.85rem;font-weight:600;color:var(--text);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.s-tip{position:fixed;z-index:60;pointer-events:none;padding:.5rem .7rem;border-radius:6px;background:var(--navy);color:#fff;font-size:.82rem;line-height:1.4;box-shadow:0 8px 20px rgba(0,0,0,.2);opacity:0;transition:opacity .15s;}
+.s-tip.on{opacity:1;}
+.s-tip b{color:var(--gold);}
+
+/* thank-you wall */
+.s-wall-section{background:#fff;border-top:1px solid var(--line);padding-block:5.5rem;scroll-margin-top:4rem;}
+.s-wall-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+.s-wall-head h2{color:var(--navy);}
+.s-note{margin:0;font-size:.9rem;}
+.s-controls{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;padding:.9rem 0;border-block:1px solid var(--line);}
+.s-tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-right:auto;}
+.s-tab{padding:.55rem 1rem;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--navy);font:600 .9rem 'Inter',sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.s-tab small{font-weight:500;color:var(--muted);margin-left:.3rem;}
+.s-tab:hover{border-color:var(--navy);}
+.s-tab[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff;}
+.s-tab[aria-selected="true"] small{color:var(--gold);}
+.s-search input,.s-sort select{height:42px;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper);padding:0 .9rem;font:500 .92rem 'Inter',sans-serif;color:var(--text);}
+.s-search input{width:230px;}
+.s-search input:focus,.s-sort select:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--navy);}
+.s-result{margin:1.2rem 0 1rem;font-size:.9rem;color:var(--muted);}
+.s-result b{color:var(--navy);}
+.s-wall{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:.8rem;}
+.s-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.9rem;padding:1rem 1.1rem;background:var(--paper);border:1px solid transparent;border-radius:var(--radius);transition:border-color .2s,background .2s,transform .2s;}
+.s-card:hover{background:#fff;border-color:var(--line);transform:translateY(-2px);}
+.s-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--gold);font-family:'Anton',sans-serif;font-size:1.05rem;letter-spacing:.02em;}
+.s-card.abroad .s-avatar{background:var(--gold);color:var(--navy);}
+.s-who{min-width:0;}
+.s-who strong{display:block;font-weight:600;color:var(--navy);line-height:1.3;overflow-wrap:break-word;}
+.s-who span{display:flex;align-items:center;gap:.35rem;font-size:.82rem;color:var(--muted);margin-top:.15rem;}
+.s-who em{font-style:normal;font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-text);background:rgba(232,178,58,.15);padding:.1rem .4rem;border-radius:999px;}
+.s-amt{text-align:right;font-weight:600;color:var(--navy);font-variant-numeric:tabular-nums;white-space:nowrap;}
+.s-amt small{display:block;font-size:.72rem;font-weight:500;color:var(--muted);}
+.s-empty{grid-column:1/-1;padding:2rem;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:var(--radius);}
+.js .s-card{animation:sIn .45s ease both;animation-delay:calc(var(--i) * 18ms);}
+@keyframes sIn{from{opacity:0;transform:translateY(8px);}}
+
+@media(max-width:1000px){
+  .s-hero-grid,.s-overview-grid{grid-template-columns:1fr;gap:2.5rem;}
+}
+@media(max-width:700px){
+  .s-hero{padding:7.5rem 0 3.5rem;}
+  .s-total{padding:1.4rem;}
+  .s-total-facts dd{font-size:1.5rem;}
+  .s-season{grid-template-columns:auto 1fr;}
+  .s-season-go{display:none;}
+  .s-bar{grid-template-columns:6rem 1fr;gap:.6rem;}
+  .s-controls{flex-direction:column;align-items:stretch;}
+  .s-tabs{margin-right:0;}
+  .s-search input{width:100%;}
+  .s-sort select{width:100%;}
+  .s-wall-section{padding-block:4rem;}
+  .s-wall{grid-template-columns:1fr;}
+}
+@media(prefers-reduced-motion:reduce){
+  .js .s-card{animation:none;}
+  .s-bar-fill{transition:none;}
+  .js .s-where:not(.in) .s-bar-fill{transform:none;}
+}
+
+/* supporter photos (optional 4th field in supporters-data.js) */
+.s-avatar{position:relative;overflow:hidden;flex:none;}
+.s-avatar i{font-style:normal;}
+.s-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.s-avatar.has-photo{width:52px;height:52px;box-shadow:0 0 0 2px #fff,0 0 0 3px var(--gold);}
+.s-avatar.has-photo i{visibility:hidden;}
+.s-card:hover .s-avatar.has-photo img{transform:scale(1.08);}
+.s-avatar img{transition:transform .3s ease;}
+
+/* footer: same look as the Club / Legacy / People / Future pages */
+.supporters-page footer{line-height:normal;}
+.supporters-page footer .logo-badge{width:52px;height:52px;border:1px solid var(--saffron);background:rgba(224,164,44,.08);border-radius:50%;}
+.supporters-page footer h3{font-size:1.8rem;line-height:.95;margin:1em 0;}
+.supporters-page footer p{margin:1em 0;line-height:1.5;}
