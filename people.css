@@ -1,0 +1,66 @@
+/* ==========================================================
+   Samdo FC — The People (people.html)
+   Squad card hover + "Far and Near" village map section.
+   ========================================================== */
+
+/* ---------- squad card hover ---------- */
+.players-wrap .polaroid{position:relative;transition:transform .35s ease,box-shadow .35s ease;}
+.players-wrap .polaroid .art img{transition:transform .6s ease,filter .4s ease;}
+.players-wrap .polaroid figcaption .name{transition:color .25s ease;}
+.players-wrap .polaroid figcaption::after{content:'';display:block;width:28px;height:2px;margin:.55rem auto 0;background:var(--saffron);transform:scaleX(0);transition:transform .35s ease;}
+@media (hover:hover){
+  .players-wrap .polaroid:hover{transform:translateY(-8px) rotate(0deg);box-shadow:0 22px 40px -14px rgba(0,0,0,.45),0 0 0 2px var(--saffron);z-index:2;}
+  .players-wrap .polaroid:hover .art img{transform:scale(1.07);filter:saturate(1.08);}
+  .players-wrap .polaroid:hover figcaption .name{color:var(--terracotta);}
+  .players-wrap .polaroid:hover figcaption::after{transform:scaleX(1);}
+}
+
+/* ---------- far and near ---------- */
+.far{position:relative;overflow:hidden;background:#0d1411;color:var(--ivory);}
+.far-media{position:relative;width:100%;aspect-ratio:1448/1086;min-height:880px;}
+.far-media img,.far-map{position:absolute;inset:0;width:100%;height:100%;display:block;}
+.far-media img{object-fit:cover;object-position:50% 100%;}
+.far-media::after{content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,12,10,.82) 0%,rgba(8,12,10,.5) 26%,rgba(8,12,10,0) 52%),
+             linear-gradient(0deg,rgba(8,12,10,.35) 0%,rgba(8,12,10,0) 22%);}
+.far-map{z-index:1;}
+.far-copy{position:absolute;z-index:2;top:0;left:0;right:0;max-width:1200px;margin:0 auto;padding:7rem 6vw 0;}
+.far-copy .eyebrow{display:block;margin-bottom:.9rem;color:var(--saffron);}
+.far-copy h2{font-size:clamp(2.2rem,5.2vw,4.4rem);color:var(--ivory);text-shadow:0 2px 18px rgba(0,0,0,.35);}
+.far-copy p{max-width:52ch;margin:1.2rem 0 0;font-family:'Oswald',sans-serif;font-weight:300;font-size:1.15rem;line-height:1.5;color:var(--ivory-dim);text-shadow:0 1px 10px rgba(0,0,0,.5);}
+
+/* map marks */
+.far-map line{stroke:var(--saffron);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;}
+.far-map .pt{fill:#fff;stroke:rgba(0,0,0,.35);stroke-width:2;}
+.far-map .home{fill:var(--saffron);stroke:#fff;stroke-width:3;}
+.far-map .ring{fill:none;stroke:var(--saffron);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:farPulse 2.6s ease-out infinite;}
+.far-map text{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:500;letter-spacing:.14em;fill:#fff;
+  paint-order:stroke;stroke:rgba(0,0,0,.55);stroke-width:5px;stroke-linejoin:round;}
+.far-map text.home-label{fill:var(--saffron);font-size:26px;}
+@keyframes farPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+
+/* draw the lines in when the section appears */
+.js-far .far-map line{stroke-dashoffset:1;transition:stroke-dashoffset 1.3s ease;}
+.js-far .far-map line:nth-of-type(2){transition-delay:.15s}
+.js-far .far-map line:nth-of-type(3){transition-delay:.3s}
+.js-far .far-map line:nth-of-type(4){transition-delay:.45s}
+.js-far .far-map .pt,.js-far .far-map text{opacity:0;transition:opacity .6s ease .9s;}
+.js-far .far.in .far-map line{stroke-dashoffset:0;}
+.js-far .far.in .far-map .pt,.js-far .far.in .far-map text{opacity:1;}
+
+/* phone: text sits above the photo, photo shown whole */
+@media (max-width:760px){
+  .far-copy{position:static;padding:4rem 6vw 2rem;}
+  .far-media{min-height:0;}
+  .far-copy h2 br{display:none;}
+  .far-media::after{background:linear-gradient(180deg,#0d1411 0%,rgba(13,20,17,0) 28%);}
+  .far-map text{font-size:44px;stroke-width:9px;letter-spacing:.08em;}
+  .far-map text.home-label{font-size:50px;}
+  .far-map line{stroke-width:6;}
+  .far-map .pt{r:11;}
+  .far-map .home{r:15;}
+}
+@media (prefers-reduced-motion:reduce){
+  .far-map .ring{animation:none;opacity:0;}
+  .js-far .far-map line,.js-far .far-map .pt,.js-far .far-map text{transition:none;stroke-dashoffset:0;opacity:1;}
+}

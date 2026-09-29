@@ -28,6 +28,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="people.css">
+<script>document.documentElement.classList.add('js-far');</script>
 </head>
 <body>
 
@@ -61,28 +63,25 @@
   </div>
 </section>
 
-<section class="pine">
-  <div class="chapter-head">
+<section class="far" aria-labelledby="farTitle">
+  <div class="far-copy">
     <span class="eyebrow">The People, Far and Near</span>
-    <h2>No Matter Where We Live,<br>Samdo Remains Home.</h2>
-    <p class="lede" style="color:var(--ivory-dim);">Villagers now living in Kathmandu, and Samdo families across the USA, Europe and Manang Side still send word home and still send support home.</p>
+    <h2 id="farTitle">No Matter Where We Live, <br>Samdo Remains Home.</h2>
+    <p>Villagers now living in Kathmandu, and Samdo families across the USA, Europe and Manang Side still send word home and still send support home.</p>
   </div>
-  <div class="globe-wrap">
-    <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="500" cy="230" r="10" fill="var(--saffron)"/>
-      <text x="500" y="215" class="node-label" text-anchor="middle">SAMDO</text>
-      <circle cx="620" cy="120" r="6" fill="var(--ivory)"/>
-      <text x="620" y="105" class="node-label" text-anchor="middle">KATHMANDU</text>
-      <circle cx="150" cy="90" r="6" fill="var(--ivory)"/>
-      <text x="150" y="75" class="node-label" text-anchor="middle">EUROPE</text>
-      <circle cx="120" cy="330" r="6" fill="var(--ivory)"/>
-      <text x="120" y="355" class="node-label" text-anchor="middle">USA</text>
-      <circle cx="840" cy="360" r="6" fill="var(--ivory)"/>
-      <text x="840" y="385" class="node-label" text-anchor="middle">Manang</text>
-      <path class="path-anim" d="M500,230 Q560,170 620,120" stroke="var(--saffron)" stroke-width="1.5" fill="none"/>
-      <path class="path-anim" d="M500,230 Q320,150 150,90" stroke="var(--saffron)" stroke-width="1.5" fill="none"/>
-      <path class="path-anim" d="M500,230 Q300,280 120,330" stroke="var(--saffron)" stroke-width="1.5" fill="none"/>
-      <path class="path-anim" d="M500,230 Q680,300 840,360" stroke="var(--saffron)" stroke-width="1.5" fill="none"/>
+  <div class="far-media">
+    <img src="images/web/samdo.jpg" alt="Samdo Village under a stormy sky with a rainbow over the valley" width="1448" height="1086" loading="lazy">
+    <svg class="far-map" viewBox="0 0 1448 1086" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <line pathLength="1" x1="757" y1="742" x2="331" y2="570"/>
+      <line pathLength="1" x1="757" y1="742" x2="979" y2="604"/>
+      <line pathLength="1" x1="757" y1="742" x2="296" y2="909"/>
+      <line pathLength="1" x1="757" y1="742" x2="1165" y2="922"/>
+      <circle class="pt" cx="331" cy="570" r="7"/><text x="331" y="545" text-anchor="middle">EUROPE</text>
+      <circle class="pt" cx="979" cy="604" r="7"/><text x="979" y="579" text-anchor="middle">KATHMANDU</text>
+      <circle class="pt" cx="296" cy="909" r="7"/><text x="296" y="955" text-anchor="middle">USA</text>
+      <circle class="pt" cx="1165" cy="922" r="7"/><text x="1165" y="968" text-anchor="middle">MANANG</text>
+      <circle class="ring" cx="757" cy="742" r="12"/>
+      <circle class="home" cx="757" cy="742" r="11"/><text class="home-label" x="757" y="690" text-anchor="middle">SAMDO</text>
     </svg>
   </div>
 </section>
@@ -123,5 +122,14 @@
 <script src="squad-data.js"></script>
 <script src="site.js"></script>
 <script src="common.js"></script>
+<script>
+(() => {
+  const far = document.querySelector('.far');
+  if (!far) return;
+  if (!('IntersectionObserver' in window)) { far.classList.add('in'); return; }
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { far.classList.add('in'); io.disconnect(); } }), { threshold: 0.3 });
+  io.observe(far.querySelector('.far-media'));
+})();
+</script>
 </body>
 </html>
