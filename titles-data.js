@@ -1,6 +1,6 @@
 /* Samdo FC — Nubri Manaslu Cup titles.
    To add a title: copy one block, change the year, opponent, score and squad.
-   squad: null  -> shows "We're working on it".
+   squad: null  -> shows "We're working on it" (use it for a year whose photos aren't ready yet).
    Photos live in images/web/squads/<year>/ (small web copies of "Champion Year Squad"). */
 (() => {
   const CLUBS = {
@@ -15,13 +15,41 @@
       year: '2016', title: 'First title',
       opponent: null, score: null,
       note: 'Where it all began: the first Nubri Manaslu Cup won by Samdo FC.',
-      squad: null
+      squad: [
+        p(2016, 'a-karma', 'A Karma'),
+        p(2016, 'babu', 'Babu'),
+        p(2016, 'chemi-dorjee', 'Chemi Dorjee'),
+        p(2016, 'choedhak', 'Choedhak'),
+        p(2016, 'lhakpa', 'Lhakpa'),
+        p(2016, 'malor-10', 'Malor'),
+        p(2016, 'nyimadorjee', 'Nyima Dorjee'),
+        p(2016, 'orgen', 'Orgen'),
+        p(2016, 'rinzing', 'Rinzing'),
+        p(2016, 'tashitsering', 'Tashi Tsering'),
+        p(2016, 'tsering-wangdue', 'Tsering Wangdue'),
+        p(2016, 'tseringdhargyal', 'Tsering Dhargyal')
+      ]
     },
     {
       year: '2022', title: 'Second title',
       opponent: { name: 'Shala A', ...CLUBS.shala }, score: '2–1',
       note: 'Samdo FC beat Shala A 2–1 in the final.',
-      squad: null
+      squad: [
+        p(2022, 'dawasangpo-1', 'Dawa Sangpo', 'Goalkeeper'),
+        p(2022, 'dawa-dhundup', 'Dawa Dhundup'),
+        p(2022, 'lhakpa', 'Lhakpa'),
+        p(2022, 'malor-10', 'Malor'),
+        p(2022, 'orgen', 'Orgen'),
+        p(2022, 'pasangchoemple', 'Pasang Choemple'),
+        p(2022, 'pasanglambu', 'Pasang Lambu'),
+        p(2022, 'pembatsering-6', 'Pemba Tsering'),
+        p(2022, 'rinzing', 'Rinzing'),
+        p(2022, 'sonam-8', 'Sonam'),
+        p(2022, 'tashigaaba', 'Tashi Gaaba'),
+        p(2022, 'tseringdhargyal', 'Tsering Dhargyal'),
+        p(2022, 'wangchuk-7', 'Wangchuk'),
+        p(2022, 'yeshi', 'Yeshi')
+      ]
     },
     {
       year: '2023', title: 'Third title',
