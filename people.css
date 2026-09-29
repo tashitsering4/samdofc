@@ -64,3 +64,6 @@
   .far-map .ring{animation:none;opacity:0;}
   .js-far .far-map line,.js-far .far-map .pt,.js-far .far-map text{transition:none;stroke-dashoffset:0;opacity:1;}
 }
+
+/* ---------- previous / next bar (same as the Legacy page) ---------- */
+.page-foot-nav.people-foot{max-width:none;margin:0;padding:2rem 6vw;}
