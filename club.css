@@ -91,3 +91,51 @@
 }
 .club-page .squad-meta .fin-note,.club-page .squad-meta .fin-links{font-family:'Inter',sans-serif;font-weight:400;font-size:.95rem;line-height:1.6;padding-top:0;max-width:60ch;}
 .club-page .squad-meta .fin-note{margin:1.2rem auto 0;}
+
+/* ---------- squad cards: hover + player viewer ---------- */
+.sq-card{display:block;width:100%;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer;font:inherit;color:inherit;border-radius:6px;transition:transform .25s ease;}
+.sq-photo{position:relative;display:block;overflow:hidden;border-radius:6px;background:#14352a;box-shadow:0 0 0 0 rgba(241,189,97,0);transition:box-shadow .25s ease;}
+.sq-card img{transition:transform .5s ease,filter .3s ease;}
+.sq-view{position:absolute;left:50%;bottom:.7rem;transform:translate(-50%,8px);padding:.35rem .75rem;border-radius:999px;background:rgba(20,45,53,.9);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;opacity:0;transition:opacity .25s ease,transform .25s ease;}
+.sq-cap{display:block;padding-top:.5rem;line-height:1.3;}
+.sq-cap strong{display:block;font-size:.92rem;font-weight:600;color:#142d35;transition:color .2s;}
+.sq-cap span{font-size:.78rem;color:#6a6f66;}
+.sq-card:hover,.sq-card:focus-visible{transform:translateY(-4px);}
+.sq-card:hover .sq-photo,.sq-card:focus-visible .sq-photo{box-shadow:0 0 0 3px #f1bd61,0 14px 28px -14px rgba(20,45,53,.6);}
+.sq-card:hover img,.sq-card:focus-visible img{transform:scale(1.07);}
+.sq-card:hover .sq-view,.sq-card:focus-visible .sq-view{opacity:1;transform:translate(-50%,0);}
+.sq-card:hover .sq-cap strong{color:#886020;}
+.sq-card:focus-visible{outline:none;}
+
+.pv{position:fixed;inset:0;z-index:10002;display:flex;align-items:center;justify-content:center;padding:1.5rem;background:rgba(8,20,26,.9);opacity:0;transition:opacity .2s ease;}
+.pv.open{opacity:1;}
+.pv[hidden]{display:none;}
+.pv-box{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);width:min(860px,100%);max-height:calc(100svh - 3rem);background:#fffaf0;border-radius:10px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:translateY(12px) scale(.98);transition:transform .25s ease;}
+.pv.open .pv-box{transform:none;}
+.pv-photo{background:#14352a;min-height:0;}
+.pv-photo img{display:block;width:100%;height:100%;max-height:calc(100svh - 3rem);aspect-ratio:4/5;object-fit:cover;object-position:50% 15%;}
+.pv-info{display:flex;flex-direction:column;padding:2.2rem 2rem 1.6rem;color:#142d35;min-width:0;}
+.pv-kicker{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#886020;padding-right:2.5rem;}
+.pv-name{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:.95;margin:.7rem 0 .4rem;color:#142d35;}
+.pv-role{margin:0;font-weight:600;color:#55615c;}
+.pv-final{margin:1.2rem 0 0;padding:.8rem 1rem;border-left:3px solid #f1bd61;background:#f5ecd9;font-size:.92rem;}
+.pv-titles{margin-top:1.4rem;}
+.pv-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#6a6f66;margin-bottom:.6rem;}
+.pv-chips{display:flex;flex-wrap:wrap;gap:.45rem;}
+.pv-chip{padding:.4rem .75rem;border-radius:999px;border:1px solid #d9ccb0;background:#fff;color:#142d35;font:600 .85rem 'Inter',sans-serif;cursor:pointer;transition:background .2s,color .2s,border-color .2s;}
+.pv-chip:hover{border-color:#142d35;}
+.pv-chip.on{background:#142d35;border-color:#142d35;color:#f1bd61;}
+.pv-nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:auto;padding-top:1.6rem;}
+.pv-count{font-size:.85rem;color:#6a6f66;}
+.pv-btn{width:44px;height:44px;border-radius:50%;border:1px solid #d9ccb0;background:#fff;color:#142d35;font-size:1.05rem;cursor:pointer;transition:background .2s,color .2s;}
+.pv-btn:hover{background:#142d35;color:#fff;}
+.pv-close{position:absolute;top:.9rem;right:.9rem;z-index:1;}
+@media(max-width:700px){
+  .pv{padding:.8rem;align-items:flex-end;}
+  .pv-box{grid-template-columns:1fr;max-height:calc(100svh - 1.6rem);overflow-y:auto;}
+  .pv-photo img{aspect-ratio:1/1;max-height:46svh;object-position:50% 12%;}
+  .pv-info{padding:1.3rem 1.2rem 1.1rem;}
+  .pv-close{background:rgba(255,255,255,.92);}
+}
+@media(hover:none){.sq-view{opacity:1;transform:translate(-50%,0);font-size:.65rem;padding:.25rem .55rem;}}
+@media(prefers-reduced-motion:reduce){.sq-card,.sq-card img,.sq-photo,.pv,.pv-box{transition:none;}}
